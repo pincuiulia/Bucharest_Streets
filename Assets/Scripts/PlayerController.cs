@@ -74,10 +74,10 @@ public class PlayerController : MonoBehaviour
 
     private bool isWalkable(Vector3 targetPos)
     {
-        // Verificăm dacă există un obiect solid în zona țintă
+        
         Collider2D hitCollider = Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer);
         
-        // Returnăm true dacă nu există niciun obiect solid în zona țintă
+        
         return hitCollider == null;
     }
 }
