@@ -8,8 +8,7 @@ using System;
 
 public class PauseMenuScript : MonoBehaviour
 {
-    //public GameObject pauseMenuScreen;
-    [SerializeField] GameObject pauseMenuScreen;
+    public GameObject pauseMenuScreen;
 
     public GameObject buttons;
 
@@ -22,8 +21,7 @@ public class PauseMenuScript : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        //pauseMenuScreen.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        pauseMenuScreen.SetActive(false);
     }
 
     public void ReloadGame()
