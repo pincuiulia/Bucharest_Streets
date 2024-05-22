@@ -33,12 +33,13 @@ public class LevelMenu : MonoBehaviour
         }
     }
 
-
+    
     // metoda care va fi apelata pentru a schimba scena
     public void SwitchScene(string sceneName)
     {
         // incarca scena cu numele specificat
         SceneManager.LoadScene(sceneName);
+        Debug.Log("Back to scene: " + sceneName);
     }
 
 }
