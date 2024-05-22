@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: noun-curved-left-arrow-191604
     originalName: 
-    pivot: {x: 0.5138889, y: -0.24074073}
+    pivot: {x: 0.546798, y: -0.24074073}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 432
+      width: 406
       height: 540
     spriteID: 3accafc2d9dfa43ba8aafde2e417b95c
     spriteBone: []
@@ -155,7 +155,7 @@ ScriptedImporter:
       cellRect:
         x: 128
         y: 130
-        width: 432
+        width: 406
         height: 540
       spriteId: 3accafc2d9dfa43ba8aafde2e417b95c
     linkedCells: []
