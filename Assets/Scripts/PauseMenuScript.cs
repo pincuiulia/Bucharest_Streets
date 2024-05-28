@@ -36,6 +36,9 @@ public class PauseMenuScript : MonoBehaviour
         SceneManager.LoadScene("Level Selection"); // this needs a recheck
     }
 
+    // Master Volume, Music Volume, SFX Volume
+
+
     public void GoToMenu()
     {
         SceneManager.LoadScene("Assets/Scenes/PauseScene.unity");
