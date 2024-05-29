@@ -42,5 +42,25 @@ public class LevelMenu : MonoBehaviour
         Debug.Log("Back to scene: " + sceneName);
     }
 
+
+    // metoda pentru a deschide scena "ShoppingMap"
+    public void GoToShoppingMap()
+    {
+        // numele scenei "ShoppingMap"
+        string shoppingMapScene = "ShoppingMap";
+
+        // verificam daca scena exista in Build Settings inainte de a o incarca
+        if (Application.CanStreamedLevelBeLoaded(shoppingMapScene))
+        {
+            SceneManager.LoadScene(shoppingMapScene);
+            Debug.Log("Scene " + shoppingMapScene + " has been loaded successfully!");
+        }
+        else
+        {
+            Debug.LogError("Scene " + shoppingMapScene + " doesn't exist in Build Settings!");
+        }
+    }
+
+
 }
 

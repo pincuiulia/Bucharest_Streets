@@ -312,8 +312,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.300108, y: 12.500002}
-  m_SizeDelta: {x: 66.812, y: 69.066}
+  m_AnchoredPosition: {x: -7.867, y: 11.019}
+  m_SizeDelta: {x: 78.203, y: 80.842}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &205110014
 MonoBehaviour:
@@ -429,14 +429,14 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8110751}
-  - {fileID: 1678250414}
   - {fileID: 205110013}
+  - {fileID: 1678250414}
   m_Father: {fileID: 1286072305}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.402}
   m_AnchorMax: {x: 0.5, y: 0.402}
-  m_AnchoredPosition: {x: -842, y: -313}
-  m_SizeDelta: {x: 155.147, y: 161.188}
+  m_AnchoredPosition: {x: -805.8046, y: -316.68024}
+  m_SizeDelta: {x: 161.447, y: 167.733}
   m_Pivot: {x: 0.49999952, y: 0.5}
 --- !u!114 &582517298
 MonoBehaviour:
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1286072309}
         m_TargetAssemblyTypeName: LevelMenu, Assembly-CSharp
         m_MethodName: SwitchScene
         m_Mode: 5
