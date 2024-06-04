@@ -15,8 +15,9 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer mySpriteRender;
 
     public LayerMask solidObjectsLayer; // Layer-ul pentru obiectele solide
-    public GameObject enemy; // Referință la obiectul inamic
+    public List<GameObject> enemies; // Lista de obiecte inamice
     private bool isTakingDamage = false;
+    public HealthBar healthBar;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         mySpriteRender = GetComponent<SpriteRenderer>();
         currentHP = maxHP;
+        //healthBar.SetMaxHealth(maxHP);
 
         Debug.Log("Awake: Initialized components");
     }
@@ -116,14 +118,17 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Attack: Triggered attack animation");
 
         // Verifică dacă inamicul este aproape
-        float distanceToEnemy = Vector2.Distance(transform.position, enemy.transform.position);
-        if (distanceToEnemy < 1.5f)
+        foreach (GameObject enemy in enemies)
         {
-            EnemyController enemyController = enemy.GetComponent<EnemyController>();
-            if (enemyController != null)
+            float distanceToEnemy = Vector2.Distance(transform.position, enemy.transform.position);
+            if (distanceToEnemy < 1.5f)
             {
-                enemyController.TakeDamage(25);
-                Debug.Log("Attack: Enemy took 25 damage");
+                EnemyController enemyController = enemy.GetComponent<EnemyController>();
+                if (enemyController != null)
+                {
+                    enemyController.TakeDamage(25);
+                    Debug.Log("Attack: Enemy took 25 damage");
+                }
             }
         }
     }
@@ -133,6 +138,7 @@ public class PlayerController : MonoBehaviour
         if (isTakingDamage) return;
 
         currentHP -= damage;
+        healthBar.SetHealth(currentHP);
         Debug.Log($"Player: Took {damage} damage, current HP = {currentHP}");
 
         StartCoroutine(DamageEffect());

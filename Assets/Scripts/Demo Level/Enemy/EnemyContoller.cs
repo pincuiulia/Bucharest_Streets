@@ -13,10 +13,12 @@ public class EnemyController : MonoBehaviour
     {
         currentHP = maxHP;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        Debug.Log("Enemy initialized with HP: " + currentHP);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Enemy collided with: " + collision.tag);
         if (collision.CompareTag("Player"))
         {
             PlayerController player = collision.GetComponent<PlayerController>();
