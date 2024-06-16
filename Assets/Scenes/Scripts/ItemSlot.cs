@@ -125,12 +125,13 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         quantityText.enabled=false;
         itemImage.sprite = emptySprite;
         ItemDescriptionNameText.text = "";
-        ItemDescriptionText.text = ""; // Corrected naming for consistency
+        ItemDescriptionText.text = ""; 
         itemDescriptionImage.sprite = emptySprite;
     }
 
     public void OnRightClick()
     {
-        // Implementation for right-click action
+       
+
     }
 }

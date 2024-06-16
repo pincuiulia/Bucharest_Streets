@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -99,4 +99,7 @@ public class RandomMovement : MonoBehaviour
         scale.x *= -1; // Inversează scala pe axa X
         transform.localScale = scale;
     }
+
+
+
 }

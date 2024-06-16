@@ -10,8 +10,8 @@ public class InventoryManager : MonoBehaviour
 
     public ItemSO[] itemSOs;
     void Start()
-    {
-        
+    {   
+       
     }
 
     // Update is called once per frame
@@ -65,4 +65,6 @@ public class InventoryManager : MonoBehaviour
             itemSlot[i].thisItemSelected = false;
         }
     }
+
 }
+

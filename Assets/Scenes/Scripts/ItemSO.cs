@@ -8,9 +8,13 @@ public class ItemSO : ScriptableObject
     public string itemName;
     public StatToChange statToChange = StatToChange.none;
     public int amountToChangeStat;
+    public int itemQuantity; // Add this variable to keep track of item quantity
 
     public bool UseItem()
     {
+    
+
+
         if (statToChange == StatToChange.health)
         {
             HealthBar healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
@@ -18,9 +22,9 @@ public class ItemSO : ScriptableObject
             {
                 return false;
             }
-            else
             {
                 healthBar.IncreaseHealth(amountToChangeStat);
+                
                 return true;
             }
         }

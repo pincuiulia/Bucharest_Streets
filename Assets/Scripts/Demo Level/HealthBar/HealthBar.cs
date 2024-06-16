@@ -31,7 +31,7 @@ public class HealthBar : MonoBehaviour
     {
 
         slider.value += amount;
-        // Ensure the health does not exceed the maximum value
+      
         if (slider.value < maxHealth)
         {
             slider.value = maxHealth;

@@ -10,14 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4918490636139209574}
   - component: {fileID: 2744163279832238959}
-  - component: {fileID: 8606776209500587591}
-  - component: {fileID: 3118040886402018974}
   - component: {fileID: 8783511239170269034}
   - component: {fileID: 6677304966856498792}
   - component: {fileID: 2143539143296332780}
+  - component: {fileID: 7218980953261724782}
+  - component: {fileID: 8685671341566441766}
   m_Layer: 0
   m_Name: Skeleton 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,37 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8606776209500587591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7668026906629143328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6aa9397b2fc6ad4fa00f94c6a5ff1f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  moveInterval: 2
-  animator: {fileID: 8783511239170269034}
-  solidObjectsLayer:
-    serializedVersion: 2
-    m_Bits: 128
---- !u!114 &3118040886402018974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7668026906629143328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eca1345f4de1a2141babbd083bf52c52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHP: 100
 --- !u!95 &8783511239170269034
 Animator:
   serializedVersion: 5
@@ -203,3 +172,34 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.3}
   m_Size: {x: 1, y: 1.5}
   m_Direction: 0
+--- !u!114 &7218980953261724782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7668026906629143328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6aa9397b2fc6ad4fa00f94c6a5ff1f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  moveInterval: 2
+  animator: {fileID: 8783511239170269034}
+  solidObjectsLayer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &8685671341566441766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7668026906629143328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca1345f4de1a2141babbd083bf52c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 100

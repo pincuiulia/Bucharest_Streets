@@ -35,6 +35,10 @@ public class Item : MonoBehaviour
                 quantity = leftOverItems;
 
         }
+        else if(collision.gameObject.tag == "Enemys")
+        {
+
+        }
     }
 
     
