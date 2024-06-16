@@ -42,32 +42,26 @@ public class CameraController : MonoBehaviour
 
         // Poziția dorită a camerei
         Vector3 targetCamPos = player.position + offset;
-        Debug.Log($"Target Camera Position: {targetCamPos}");
 
         // Calcularea limitelor hărții
         float camHalfHeight = cam.orthographicSize;
         float camHalfWidth = cam.aspect * camHalfHeight;
-        Debug.Log($"Camera Half Width: {camHalfWidth}, Camera Half Height: {camHalfHeight}");
 
         Bounds tilemapBounds = tilemap.localBounds;
-        Debug.Log($"Tilemap Bounds: {tilemapBounds}");
 
         float minX = tilemapBounds.min.x + camHalfWidth;
         float maxX = tilemapBounds.max.x - camHalfWidth;
         float minY = tilemapBounds.min.y + camHalfHeight;
         float maxY = tilemapBounds.max.y - camHalfHeight;
 
-        Debug.Log($"Clamping Values: minX={minX}, maxX={maxX}, minY={minY}, maxY={maxY}");
-
         // Verifică dacă limitele sunt valide
         if (minX > maxX) minX = maxX = (minX + maxX) / 2;
         if (minY > maxY) minY = maxY = (minY + maxY) / 2;
 
-        float clampedX = Mathf.Clamp(targetCamPos.x, minX, maxX);
-        float clampedY = Mathf.Clamp(targetCamPos.y, minY, maxY);
+        // Poziția camerei astfel încât player-ul să fie în centru, dar să nu depășească limitele hărții
+        float clampedX = Mathf.Clamp(player.position.x + offset.x, minX, maxX);
+        float clampedY = Mathf.Clamp(player.position.y + offset.y, minY, maxY);
         Vector3 clampedCamPos = new Vector3(clampedX, clampedY, targetCamPos.z);
-
-        Debug.Log($"Clamped Camera Position: {clampedCamPos}");
 
         // Interpolează poziția camerei către poziția dorită
         transform.position = Vector3.Lerp(transform.position, clampedCamPos, smoothing * Time.deltaTime);
