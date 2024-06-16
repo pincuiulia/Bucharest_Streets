@@ -3,9 +3,9 @@ using UnityEngine.Tilemaps;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform player; // Referință la obiectul de urmărit (player-ul)
-    public float smoothing = 5f; // Viteza de urmărire a camerei
-    public Vector3 offset; // Offset-ul camerei față de player
+    public Transform player; // Referinta la obiectul de urmarit (player-ul)
+    public float smoothing = 5f; // Viteza de urmarire a camerei
+    public Vector3 offset; // Offset-ul camerei fata de player
     public float zoomSpeed = 2f; // Viteza de zoom
     public float minZoom = 5f; // Nivelul minim de zoom
     public float maxZoom = 15f; // Nivelul maxim de zoom
@@ -15,20 +15,20 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        // Setează offset-ul inițial dacă nu este setat în Inspector
+        // Setam offset-ul initial daca nu este setat in Inspector
         if (offset == Vector3.zero)
         {
             offset = transform.position - player.position;
         }
 
-        // Referință la componenta Camera
+        // Referinta la componenta Camera
         cam = GetComponent<Camera>();
 
-        // Găsește obiectul Background și preia componenta Tilemap
-        tilemap = GameObject.Find("Background").GetComponent<Tilemap>();
+        // Gaseste obiectul Ground si preia componenta Tilemap
+        tilemap = GameObject.Find("Ground").GetComponent<Tilemap>();
         if (tilemap == null)
         {
-            Debug.LogError("Background not found or missing Tilemap component.");
+            Debug.LogError("Ground not found or missing Tilemap component.");
         }
     }
 
@@ -40,11 +40,11 @@ public class CameraController : MonoBehaviour
             return;
         }
 
-        // Poziția dorită a camerei
+        // Pozitia dorita a camerei
         Vector3 targetCamPos = player.position + offset;
         Debug.Log($"Target Camera Position: {targetCamPos}");
 
-        // Calcularea limitelor hărții
+        // Calcularea limitelor hartii
         float camHalfHeight = cam.orthographicSize;
         float camHalfWidth = cam.aspect * camHalfHeight;
         Debug.Log($"Camera Half Width: {camHalfWidth}, Camera Half Height: {camHalfHeight}");
@@ -59,7 +59,7 @@ public class CameraController : MonoBehaviour
 
         Debug.Log($"Clamping Values: minX={minX}, maxX={maxX}, minY={minY}, maxY={maxY}");
 
-        // Verifică dacă limitele sunt valide
+        // Verificam daca limitele sunt valide
         if (minX > maxX) minX = maxX = (minX + maxX) / 2;
         if (minY > maxY) minY = maxY = (minY + maxY) / 2;
 
@@ -69,17 +69,17 @@ public class CameraController : MonoBehaviour
 
         Debug.Log($"Clamped Camera Position: {clampedCamPos}");
 
-        // Interpolează poziția camerei către poziția dorită
+        // Interpolam pozitia camerei catre pozitia dorita
         transform.position = Vector3.Lerp(transform.position, clampedCamPos, smoothing * Time.deltaTime);
     }
 
     void Update()
     {
-        // Ajustează mărirea camerei
+        // Ajustam marirea camerei
         float scrollData = Input.GetAxis("Mouse ScrollWheel");
         cam.orthographicSize = Mathf.Clamp(cam.orthographicSize - scrollData * zoomSpeed, minZoom, maxZoom);
 
-        // Recalculează limitele pentru noua dimensiune a camerei
+        // Recalculam limitele pentru noua dimensiune a camerei
         FixedUpdate();
     }
 }
