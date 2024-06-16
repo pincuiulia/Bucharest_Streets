@@ -1,2 +1,17 @@
-# Auto detect text files and perform LF normalization
+# Convert all text files to use LF line endings in the repo and CRLF in the working directory
 * text=auto
+
+# Keep binary files untouched
+*.png binary
+*.jpg binary
+*.gif binary
+*.tga binary
+*.dds binary
+*.mp4 binary
+*.ogg binary
+*.wav binary
+*.mp3 binary
+*.fbx binary
+*.mat binary
+*.ttf binary
+*.otf binary
