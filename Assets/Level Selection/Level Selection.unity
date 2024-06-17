@@ -2563,8 +2563,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- next button  care ma trimite catre urmatorul screen cu nivele - inca
-    nefunctional
+  m_text: '- butonul cu carucior ma va redirectiona catre o scena care contine Shopping
+    Map-ul jocului.
 
 
     - D va fi nivelul DEMO pe care urmeaza sa il implementam
