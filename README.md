@@ -1,6 +1,14 @@
 # Bucharest Streets
+*A Top-Down RPG (Role-playing game) in 2D format, based on a narrative thread, made in Unity, using C#.*
 
-*A simulation of a Top-Down RPG (Role-playing game) in 2D format, based on a narrative thread. The mayor, Nicusor Dan, has a mission to save the city from monsters.*
+## Team Members
+- Zamfirescu Alexandra - grupa 241
+- Pincu Iulia - grupa 242
+- Dobromirescu Mihaela - grupa 242
+- Bejenaru Andrada - grupa 244
+
+## Epic Story
+*The player takes on the role of Mayor Nicusor Dan, tasked with saving the city from a monstrous invasion. The narrative unfolds through various quests and challenges, requiring combat skills and resource management. The player must navigate through different city districts, each with unique enemies and obstacles, to restore peace and order.*
 
 ## Demo
 [Bucharest Streets - Proiect MDS](https://youtu.be/Si4YniHBs2M)
