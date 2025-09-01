@@ -23,4 +23,12 @@
 
 [GENERAL SETTINGS](https://docs.google.com/document/d/1Z15IKJwPqZBbu__10ihRcmGFqDn166QVdJ67Tmatb9w/edit?usp=sharing)
 
+# Bucharest Streets
+*A Top-Down RPG (Role-playing game) in 2D format, based on a narrative thread, made in Unity, using C#.*
+
+
+## Demo
+[Bucharest Streets - Proiect MDS](https://youtu.be/Si4YniHBs2M)
+
+
 
